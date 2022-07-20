@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [DistributeParall]" parallel="tests">
+  <test thread-count="2" name="Test2(failed)" parallel="tests">
+    <classes>
+      <class name="Sample.ContactTest">
+        <methods>
+          <include name="CloseBrowser"/>
+          <include name="createContactTest"/>
+          <include name="loginToApplicationTest"/>
+          <include name="confiCloseDB"/>
+          <include name="createAndDeletetheContactTest"/>
+          <include name="logoutToApplicatioTest"/>
+          <include name="OpenBrowser"/>
+          <include name="confiConnectDB"/>
+        </methods>
+      </class> <!-- Sample.ContactTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="2" name="Test1(failed)" parallel="tests">
+    <classes>
+      <class name="Sample.campaignTest">
+        <methods>
+          <include name="CreateCampaignTest"/>
+          <include name="CloseBrowser"/>
+          <include name="loginToApplicationTest"/>
+          <include name="confiCloseDB"/>
+          <include name="logoutToApplicatioTest"/>
+          <include name="OpenBrowser"/>
+          <include name="createCampaignWithproductTest"/>
+          <include name="confiConnectDB"/>
+        </methods>
+      </class> <!-- Sample.campaignTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [DistributeParall] -->
